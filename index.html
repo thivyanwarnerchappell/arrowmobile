@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta name="robots" content="noindex">
+	<meta name="googlebot" content="noindex">
+	<meta name="googlebot-news" content="nosnippet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Arrow</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="../arrowmobilesite/assets/images/favicon.ico"/>
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Main Style -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <!-- Open Sans for body and title font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
+	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<!-- Start Header -->
+	<header id="demo-header" class="" role="banner">
+		<div class="demo-header-overlay">
+			<div class="container">
+				<div class="demo-header-area">
+
+					<!-- Start Logo -->
+					<div class="demo-logo-area">
+						<!-- text based logo -->
+						<a class="demo-logo" href="#"></a>
+					</div>
+					<!-- End Logo -->
+
+					<!-- Start header featured area -->
+					<div class="demo-header-featured-area">
+						<div class="demo-header-featured-img">
+							<img src="../arrowmobilesite/assets/images/iphone.png" alt="iphone image">
+						</div>
+
+						<div class="demo-header-featured-content">
+							<h1>Welcome To <span>Warner Chappell Music Arrow</span></h1>
+
+							<div class="demo-app-download-area">
+								<h4>Download the App</h4>
+								<a class="production-apple-btn" href="itms-services://?action=download-manifest&url=https://arrow.wmg.com/arrow/mobile/download/manifest.plist"><i class="fa fa-apple"></i><span>iOS</span></a>
+								<a class="staging-apple-btn" href="itms-services://?action=download-manifest&url=https://arrow.wmg.com/arrow/mobile/download/manifest.plist"><i class="fa fa-apple"></i><span>iOS Staging</span></a>
+							</div>
+
+						</div>
+					</div>
+					<!-- End header featured area -->
+
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- End Header -->
+
+	<!-- Start footer -->
+	<footer id="demo-footer" role="contentinfo">
+			<div class="container">
+				<div class="demo-footer-area">
+					<p class="demo-copy-right">Warner Chappell Music Arrow<br/>
+						Copyright  <script type="text/javascript">document.write(new Date().getFullYear());</script> Warner Chappell Music, Inc.<br/>
+						The name "Warner Chappell Music" is a registered trademark and the "crown" logo is a trademark of Warner Chappell Music, Inc.</p>
+				</div>
+			</div>
+	</footer>
+	<!-- End footer -->
+	
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+		<script>
+			console.log(window.location.hostname);
+	var hostname = window.location.hostname;
+	if(hostname == "arrow.wmg.com") {
+		$(".production-apple-btn").show();
+		$(".staging-apple-btn").hide();
+	} else {
+		$(".staging-apple-btn").show();
+		$(".production-apple-btn").hide();
+	}
+			
+	var year = new Date().getFullYear()
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+   
+    if (/windows phone/i.test(userAgent)) {
+        $(".production-apple-btn").hide();
+    } else if (/android/i.test(userAgent)) {
+        $(".production-apple-btn").hide();
+    }
+    
+   else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        $(".demo-google-btn").hide();
+    } else {
+	// $(".demo-google-btn").show();
+	// $(".demo-apple-btn").show();
+	}
+
+	</script>
+  </body>
+</html>
